@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(245, 245, 103);
+}
+
+.showingIngrediant {
+  height: 50px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.showingIngrediant img {
+  width: 50vh;
+}
+
+.showingIngrediant li {
+  list-style: none;
+}
