@@ -5,7 +5,6 @@ const searchMeal = () => {
 
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`;
 
-  //fetching data from server
   fetch(url)
     .then((res) => res.json())
     .then((data) => showMeal(data.meals))
@@ -19,7 +18,6 @@ const errorText = (error) => {
   errText.innerText = error;
 };
 
-//creating meal list
 const showMeal = (meals) => {
   const mealContainer = document.getElementById("mealContainer");
   
@@ -37,7 +35,6 @@ const showMeal = (meals) => {
   });
 };
 
-//showing ingrediants
 const showIngrediants = (
   mealImage,
   mealName,
@@ -50,7 +47,7 @@ const showIngrediants = (
   const ingrediantContainer = document.getElementById("showIngrediantName");
   document.getElementById("mealContainer").innerHTML = "";
   const ingrediantDiv = document.createElement("div");
-  // ingrediantDiv.className =
+
   ingrediantDiv.innerHTML = `
     <img src="${mealImage}" alt="Food Item" />
     <h3>${mealName}</h3>
